@@ -228,7 +228,13 @@ add_action('fieldex_filter_pre_get_post/type=email', 'fieldex_filter_text_field'
 
 function fieldex_filter_exact(&$query, $field, $value)
 {
-    if (empty($value) || is_array($value)) {
+    if (is_array($value) && $field['type'] != 'true_false') {
+        return;
+    }
+
+    $value = (array) $value;
+
+    if (COUNT($value) == 1 && $value[0] == '') {
         return;
     }
 
@@ -237,7 +243,7 @@ function fieldex_filter_exact(&$query, $field, $value)
     $meta_query[] = array(
         'key'     => $field['name'],
         'value'   => $value,
-        'compare' => '='
+        'compare' => 'IN'
     );
 
     $query->set('meta_query', $meta_query);
@@ -246,6 +252,7 @@ function fieldex_filter_exact(&$query, $field, $value)
 add_action('fieldex_filter_pre_get_post/type=user', 'fieldex_filter_exact', 10, 3);
 add_action('fieldex_filter_pre_get_post/type=radio', 'fieldex_filter_exact', 10, 3);
 add_action('fieldex_filter_pre_get_post/type=select', 'fieldex_filter_exact', 10, 3);
+add_action('fieldex_filter_pre_get_post/type=true_false', 'fieldex_filter_exact', 10, 3);
 
 function fieldex_filter_array_values(&$query, $field, $value)
 {
@@ -781,6 +788,15 @@ function fieldex_filter_range_fields($fields, $post_type, $input)
             $choices = array('' => 'All');
             $choices += $fields[$key]['choices'];
             $fields[$key]['choices'] = $choices;
+        }
+        if ($field['type'] == 'true_false') {
+            $fields[$key]['type'] = 'checkbox';
+            $fields[$key]['toggle'] = false;
+            $fields[$key]['layout'] = 'horizontal';
+            $fields[$key]['choices'] = array(
+                1 => 'Yes',
+                0 => 'No'
+            );
         }
     }
 
