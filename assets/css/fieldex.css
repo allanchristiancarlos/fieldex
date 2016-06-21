@@ -1,0 +1,35 @@
+.fieldex .fieldex-form-inner {
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.fieldex .fieldex-form {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.fieldex .fieldex-form:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: red;
+    top: 0;
+    left: 0;
+}
+
+.fieldex #posts-filter .tablenav.top {
+    position: relative;
+}
+
+.fieldex .tablenav.top .acf-field-select select {
+    float: none;
+    max-width: 100%;
+}
