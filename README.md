@@ -33,51 +33,35 @@ Filtering
 ![alt](http://image.prntscr.com/image/5a1b45c105264a6f9888f9021debea98.png)
 
 ### Options
+```
+'fieldex' => array(
+    'fields' => array(
+        'field_5763b7dc8050c' => array(
+            'sortable' => true,
+            'filterable' => true,
+            'show_column' => true,
+            'label' => 'My Custom Label',
+        )
+    )
+) 
+``` 
 
-1. *sortable* (Optional, Boolean, Default true)
+- *sortable* (Optional, Boolean, Default true)
+  
   Makes the column sortable. Please note that not all field types are sortable.
-  ```
-  'fieldex' => array(
-    'fields' => array(
-      'field_5763b7dc8050c' => array(
-        'sortable' => true
-      )
-    )
-  ) 
-  ``` 
-2. *filterable* (Optional, Boolean, Default true)
+  
+- *filterable* (Optional, Boolean, Default true)
+  
   Adds a filter to the post table "Advanced Filter" button
-  ```
-  'fieldex' => array(
-    'fields' => array(
-      'field_5763b7dc8050c' => array(
-        'filterable' => true
-      )
-    )
-  ) 
-  ```
-3. *show_column* (Optional, Boolean, Default true)
+
+- *show_column* (Optional, Boolean, Default true)
+  
   Shows or hides the column in the post table
-  ```
-  'fieldex' => array(
-    'fields' => array(
-      'field_5763b7dc8050c' => array(
-        'show_column' => true
-      )
-    )
-  ) 
-  ```
-4. *label* (Optional, String, Default none)
+
+- *label* (Optional, String, Default none)
+  
   Creates custom label for the column name and search filter label instead of the fields label.
-  ```
-  'fieldex' => array(
-    'fields' => array(
-      'field_5763b7dc8050c' => array(
-        'label' => "My Custom Label"
-      )
-    )
-  ) 
-  ```
+
 
 ### Sortable Field Types
 - text
