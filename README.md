@@ -94,7 +94,6 @@ Filtering
 ### Limitation
 - Repeater field not supported yet.
 - Not all fields are sortable.
-- Filtering array like multiple select or checkbox is not good because the meta_query relation OR can't be use because of multiple meta_query filters.
 
 ### TODO
 - Repeater field support
