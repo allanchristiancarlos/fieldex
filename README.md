@@ -79,6 +79,18 @@ Filtering
   ) 
   ```
 
+### Sortable Field Types
+- text
+- textarea
+- wysiwyg
+- number
+- date_picker
+- date_time_picker
+- time_picker
+- url
+- radio
+- email
+
 ### Limitation
 - Repeater field not supported yet.
 - Not all fields are sortable.
