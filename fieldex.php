@@ -788,25 +788,3 @@ function fieldex_filter_range_fields($fields, $post_type, $input)
 }
 
 add_filter('fieldex_filter_fields', 'fieldex_filter_range_fields', 10, 3);
-
-
-add_action('init', function() {
-    register_post_type( 'sample', array(
-        'public' => true,
-        'show_ui' => true,
-        'label' => 'Sample',
-        'fieldex' => array(
-            'fields' => array(
-                'field_576394f3c101a',
-                'field_5763baa26e620' => array(
-                    'show_column' => 0
-                ),
-                // 'field_576394f3c101a',
-                'field_57639fe0a5cc1',
-                'field_5763a02875848',
-                'field_5763a3ffb9c0e',
-                'field_5763b7dc8050c'
-            )
-        )
-    ) );
-});
