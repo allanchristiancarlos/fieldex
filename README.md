@@ -1,6 +1,11 @@
 # Fieldex
 Developer plugin used with ACF for displaying fields in the post table and creating filters.
 
+### Requirements
+
+1. ACF 5
+2. WordPress 4.2 and above.
+
 ### How to install
 
 1. [Download](https://github.com/allanchristiancarlos/fieldex/archive/master.zip) plugin.
