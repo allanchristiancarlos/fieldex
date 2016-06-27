@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Fieldex
-Plugin URI: mailto:allanchristiancarlos@gmail.com
+Plugin URI: https://github.com/allanchristiancarlos/fieldex
 Description: Creates filters and columns for the admin
 Version: 0.1.0
 Author: Allan Christian Carlos
-Author URI: mailto:allanchristiancarlos@gmail.com
+Author URI: https://github.com/allanchristiancarlos
 */
 
 if (!defined('ABSPATH')) {
